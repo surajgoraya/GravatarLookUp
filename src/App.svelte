@@ -22,7 +22,7 @@
 	</div>
 	<div class="avatar">
 		{#if hash == ''}
-			<p class="muted">Press 'enter' to get the Gavatar</p>
+			<p class="muted">Press <kbd>enter</kbd> to get the Gavatar</p>
 		{:else}
 			<img src={avURL} alt={`${email}'s Gavatar Avatar.`}/>
 			<br/>
