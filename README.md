@@ -1,7 +1,7 @@
-# Gavatar Look Up Tool
-Availble here: [gavatarlookup.vercel.app](https://gavatarlookup.vercel.app)
+# Gravatar Look Up Tool
+Availble here: [gravatarlookup.vercel.app](https://gravatarlookup.vercel.app)
 
-Looks up [Gavatar](https://en.gravatar.com/) profile pictures via an email, good for easily grabbing and downloading your own avatar if you don't have access to it anymore
+Looks up [Gravatar](https://en.gravatar.com/) profile pictures via an email, good for easily grabbing and downloading your own avatar if you don't have access to it anymore
 
 This app uses [Svelte](https://svelte.dev/), and was mainly made so I can get my hands dirty and build _something_ with Svelte. Deployment and Getting started instructions 
 are below.
