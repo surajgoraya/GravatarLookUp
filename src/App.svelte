@@ -13,8 +13,8 @@
 </script>
 
 <main>
-	<h1>Gavatar Look Up</h1>
-	<p>Look up and get any <a href="https://en.gravatar.com/">Gavatar</a></p>
+	<h1>Gravatar Look Up</h1>
+	<p>Look up and get any <a href="https://en.gravatar.com/">Gravatar</a></p>
 	<div class="get-area">
 		<hr/>
 		<input placeholder="example@example.com" type='email' on:keydown={handleEmailChange}/>
@@ -22,9 +22,9 @@
 	</div>
 	<div class="avatar">
 		{#if hash == ''}
-			<p class="muted">Press <kbd>enter</kbd> to get the Gavatar</p>
+			<p class="muted">Press <kbd>enter</kbd> to get the Gravatar</p>
 		{:else}
-			<img src={avURL} alt={`${email}'s Gavatar Avatar.`}/>
+			<img src={avURL} alt={`${email}'s Gravatar Avatar.`}/>
 			<br/>
 			<br/>
 			{#if email !== '' } [<a href={`https://www.gravatar.com/avatar/${hash}?s=2048`} target="_blank">Full Res</a>] {/if}
