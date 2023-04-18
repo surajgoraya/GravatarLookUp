@@ -1,1 +1,20 @@
 @import url('/sakura.css');
+
+.muted {
+    margin-top: 2rem;
+    text-transform: lowercase;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+@media screen and  (max-width: 400px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and  (max-width: 280px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+}

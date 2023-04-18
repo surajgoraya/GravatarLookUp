@@ -1,7 +1,8 @@
 <script>
 	import md5 from "md5";
-	import {fade, scale} from 'svelte/transition';
-    import Top from "./Top.svelte";
+	import {fade} from 'svelte/transition';
+    import Top from "./components/Top.svelte";
+    import Footer from "./components/Footer.svelte";
 	
 	let email = ''
 	$: hash = email == '' ? '' : md5(email.toLowerCase());
@@ -31,6 +32,7 @@
 			{#if email !== '' } <div class="avatar__addInfo"><p class="md5">MD5 Hash: <code>{hash}</code></p><a href={`https://www.gravatar.com/avatar/${hash}?s=2048`} target="_blank">Full Res Image&nbsp;<i class="bi bi-box-arrow-up-right"></i></a></div> {/if}
 		{/if}
 	</div>
+	<Footer/>
 </main>
 
 <style>
@@ -47,12 +49,6 @@
 		align-items: center;
 		gap:.5rem;
 		margin: auto;
-	}
-	.muted {
-		margin-top: 2rem;
-		text-transform: lowercase;
-		font-weight: 300;
-		opacity: 0.5;
 	}
 
 	input{

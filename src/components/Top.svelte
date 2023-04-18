@@ -1,6 +1,9 @@
+<script>
+    import Logo from './Logo.svelte';
+</script>
 <nav class="navigation">
     <ul>
-        <li>    <h1>Gravatar Look Up</h1></li>
+        <li><h1>Gravatar Look Up</h1></li>
         <li><a href="https://github.com/surajgoraya/GravatarLookUp"><i class="bi bi-github"></i>&nbsp; Source</a></li>
     </ul>
 </nav>
