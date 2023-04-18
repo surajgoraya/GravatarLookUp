@@ -1,5 +1,7 @@
 # Gravatar Look Up Tool
 
+<center><img src="./public/favicon.png" alt="Gravatar Lookup Tool Logo" width="200"/></center>
+
 ### Available here: [gravatarlookup.vercel.app](https://gravatarlookup.vercel.app)
 
 Looks up [Gravatar](https://en.gravatar.com/) profile pictures via an email, good for easily grabbing and downloading your own avatar if you don't have access to it anymore

@@ -1,5 +1,8 @@
 <script>
 	import md5 from "md5";
+	import {fade, scale} from 'svelte/transition';
+    import Top from "./Top.svelte";
+	
 	let email = ''
 	$: hash = email == '' ? '' : md5(email.toLowerCase());
 	$: avURL = `https://www.gravatar.com/avatar/${hash}?s=1024`;
@@ -13,26 +16,38 @@
 </script>
 
 <main>
-	<h1>Gravatar Look Up</h1>
+	<Top/>
 	<p>Look up and get any <a href="https://en.gravatar.com/">Gravatar</a></p>
 	<div class="get-area">
 		<hr/>
-		<input placeholder="example@example.com" type='email' on:keydown={handleEmailChange}/>
-		<p class="md5">MD5 Hash: <code>{hash}</code></p>
+		<p class="muted">Press <kbd>enter</kbd> on your keyboard to get the Gravatar</p>
+		<input placeholder="example@example.com" type="email" on:keydown={handleEmailChange}/>
 	</div>
 	<div class="avatar">
-		{#if hash == ''}
-			<p class="muted">Press <kbd>enter</kbd> to get the Gravatar</p>
-		{:else}
-			<img src={avURL} alt={`${email}'s Gravatar Avatar.`}/>
+		{#if hash != ''}
+			<img src={avURL} alt={`${email}'s Gravatar Avatar.`} transition:fade/>
+			
 			<br/>
-			<br/>
-			{#if email !== '' } [<a href={`https://www.gravatar.com/avatar/${hash}?s=2048`} target="_blank">Full Res</a>] {/if}
+			{#if email !== '' } <div class="avatar__addInfo"><p class="md5">MD5 Hash: <code>{hash}</code></p><a href={`https://www.gravatar.com/avatar/${hash}?s=2048`} target="_blank">Full Res Image&nbsp;<i class="bi bi-box-arrow-up-right"></i></a></div> {/if}
 		{/if}
 	</div>
 </main>
 
 <style>
+	.avatar {
+		margin-top: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.avatar__addInfo {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		gap:.5rem;
+		margin: auto;
+	}
 	.muted {
 		margin-top: 2rem;
 		text-transform: lowercase;
@@ -41,13 +56,15 @@
 	}
 
 	input{
-		width: 60%;
+		padding:1rem;
+		width: 100%;
 		text-align: center;
 	}
 
 	.md5 {
 		font-weight: 300;
-		opacity: 0.3;
+		opacity: 0.5;
+		/* width: 100%; */
 	}
 
 	img {
@@ -63,13 +80,12 @@
 	hr {
 		opacity: 0.5;
 		margin-bottom: 2rem;
-		width: 25%;
 	}	
 
-	h1 {
-		color: #cc1d1d;
-		text-transform: uppercase;
-		font-weight: 600;
-		margin-bottom: -1rem;
+
+	@media (max-width:641px) {
+		.get-area{
+			margin-top: 0;
+		}
 	}
 </style>
