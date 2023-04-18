@@ -1,12 +1,12 @@
 # Gravatar Look Up Tool
 
-<center><img src="./public/favicon.png" alt="Gravatar Lookup Tool Logo" width="200"/></center>
+<img src="./public/favicon.png" alt="Gravatar Lookup Tool Logo" width="200"/>
 
 ### Available here: [gravatarlookup.vercel.app](https://gravatarlookup.vercel.app)
 
 Looks up [Gravatar](https://en.gravatar.com/) profile pictures via an email, good for easily grabbing and downloading your own avatar if you don't have access to it anymore
 
-This app uses [Svelte](https://svelte.dev/), and was mainly made so I can get my hands dirty and build _something_ with Svelte. Deployment and Getting started instructions 
+This app uses [Svelte](https://svelte.dev/), as well as the beautiful [Sakura](https://github.com/oxalorg/sakura/) and was mainly made so I can get my hands dirty and build _something_ with Svelte. Deployment and Getting started instructions 
 are below.
 
 ## Get started
